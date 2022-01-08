@@ -9,14 +9,15 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .article {
     background-color: aliceblue;
     padding: 2%;
-    margin: 5% 2%;
-    width: 30%;
-    height: 15%;
+    margin: 2% 1%;
+    width: 40%;
+    height: 20%;
     border-radius: 10px;
     box-shadow: black 2px 2px 5px;
 }
