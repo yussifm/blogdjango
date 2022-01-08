@@ -1,0 +1,15 @@
+.article {
+    margin: 0 auto;
+    width: 80vw;
+    height: 100vh;
+}
+
+p {
+    font-size: larger;
+    color: gray;
+}
+
+h4 {
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}

@@ -1,0 +1,86 @@
+body {
+    background-color: gainsboro;
+    width: 90vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.article {
+    background-color: aliceblue;
+    padding: 2%;
+    margin: 5% 2%;
+    width: 30%;
+    height: 15%;
+    border-radius: 10px;
+    box-shadow: black 2px 2px 5px;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+
+.article p,
+h6 {
+    color: rgb(155, 153, 153);
+    font-size: medium;
+}
+
+.article h6 {
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+
+/* .article a {
+    color: black;
+} */
+
+a {
+    text-decoration: none;
+}
+
+.addbtn a:visited {
+    color: whitesmoke;
+}
+
+.addbtn a {
+    color: whitesmoke;
+}
+
+.addbtn {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    width: max-content;
+    height: max-content;
+    border-radius: 30px;
+    position: sticky;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+    .contents {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .article {
+        padding: 2%;
+        margin: 5% 2%;
+        width: 80%;
+        height: 20%;
+    }
+}

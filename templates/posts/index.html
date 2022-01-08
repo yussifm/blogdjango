@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="header">
+        <center>
+            <h1>MYBLOG</h1>
+            <hr color="black" width="50%" size="5px">
+        </center>
+
+    </div>
+    <div class="addbtn">
+        <center>
+            <a href="{% url 'posts' %}"> Create a New Post</a>
+        </center>
+    </div>
+    <div class="contents">
+        {% for post in posts reversed %}
+        
+            <div class="article">
+             <a href="post/{{post.id}}">
+                <h2 class="title"> {{post.title}}</h2>
+                <h6>{{post.date_of_post}}</h6>
+                <hr color="green">
+                <p>{{post.decs | truncatewords:20}}</p>
+             </a>
+
+            </div>
+        
+        {% endfor %}
+
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
