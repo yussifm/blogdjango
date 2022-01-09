@@ -15,7 +15,7 @@ def addPost(request):
         if(blog_title !="" and descriptoin != ''):
             blog = Posts(title = blog_title,decs=descriptoin, date_of_post = datetime.now())
             blog.save()
-            return redirect(to='index.html')
+            return redirect(to='index')
         else:
               return render(request=request,template_name='posts/addpost.html',)
             
